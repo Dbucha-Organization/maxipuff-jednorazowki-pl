@@ -1,0 +1,209 @@
+/* ===========================
+   Product Carousel - Mobile Responsive Styles
+   ADD THESE STYLES TO YOUR style.css FILE AFTER LINE 1558
+   =========================== */
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+    .product-carousel-section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .carousel-container {
+        padding: 0 var(--spacing-lg);
+    }
+
+    .product-card-compact {
+        flex: 0 0 calc(50% - var(--spacing-md));
+    }
+
+    .section-title-center {
+        font-size: var(--font-3xl);
+    }
+
+    .section-subtitle {
+        font-size: var(--font-base);
+    }
+}
+
+/* Mobile breakpoint - Vertical stacking */
+@media (max-width: 768px) {
+    .product-carousel-section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .section-title-center {
+        font-size: var(--font-2xl);
+        margin-bottom: var(--spacing-md);
+        padding: 0 var(--spacing-md);
+    }
+
+    .section-subtitle {
+        font-size: var(--font-base);
+        margin-bottom: var(--spacing-xl);
+        padding: 0 var(--spacing-md);
+        line-height: 1.8;
+    }
+
+    .carousel-wrapper {
+        margin-top: var(--spacing-lg);
+    }
+
+    .carousel-container {
+        padding: 0;
+        overflow: visible;
+    }
+
+    /* Stack cards vertically */
+    .carousel-track {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+        padding: 0 var(--spacing-md);
+    }
+
+    .product-card-compact {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card-compact:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Center-align content */
+    .product-details {
+        padding: var(--spacing-lg);
+        text-align: center;
+        align-items: center;
+    }
+
+    .product-title {
+        font-size: var(--font-lg);
+        min-height: auto;
+    }
+
+    .product-rating-compact {
+        justify-content: center;
+        font-size: var(--font-base);
+    }
+
+    .product-price-compact {
+        font-size: var(--font-xl);
+    }
+
+    /* Touch-friendly button */
+    .btn-buy-compact {
+        padding: var(--spacing-md) var(--spacing-xl);
+        font-size: var(--font-lg);
+        min-height: 48px;
+        width: 100%;
+    }
+
+    /* Hide carousel navigation on mobile */
+    .carousel-nav {
+        display: none;
+    }
+
+    .carousel-indicators {
+        display: none;
+    }
+
+    /* Preserve animations with stagger effect */
+    .product-card-compact {
+        animation: fadeInUp 0.5s ease-out forwards;
+        opacity: 0;
+    }
+
+    .product-card-compact:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .product-card-compact:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .product-card-compact:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+    .product-carousel-section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .section-title-center {
+        font-size: var(--font-xl);
+        line-height: 1.3;
+    }
+
+    .section-subtitle {
+        font-size: var(--font-sm);
+        line-height: 1.6;
+    }
+
+    .carousel-track {
+        gap: var(--spacing-lg);
+        padding: 0 var(--spacing-sm);
+    }
+
+    .product-card-compact {
+        border-radius: var(--radius-lg);
+    }
+
+    .product-image-container {
+        height: 200px;
+        padding: var(--spacing-md);
+    }
+
+    .product-details {
+        padding: var(--spacing-md);
+        gap: var(--spacing-xs);
+    }
+
+    .product-title {
+        font-size: var(--font-base);
+        font-weight: var(--weight-semibold);
+    }
+
+    .product-rating-compact {
+        font-size: var(--font-sm);
+    }
+
+    .product-price-compact {
+        font-size: var(--font-lg);
+        margin: var(--spacing-xs) 0;
+    }
+
+    .btn-buy-compact {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-base);
+        min-height: 44px;
+    }
+
+    .btn-buy-compact svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Reduced motion support for mobile */
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+    .product-card-compact {
+        animation: none;
+        opacity: 1;
+    }
+
+    .product-card-compact:hover {
+        transform: none;
+    }
+
+    .product-img,
+    .btn-buy-compact svg {
+        transition: none;
+    }
+}
